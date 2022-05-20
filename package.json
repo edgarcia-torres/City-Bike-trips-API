@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.4"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "tripsapi",
+  "version": "1.0.0",
+  "description": "This API helps do action on a trips database",
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "Edgar David Garcia Torres",
+  "license": "ISC"
+}
