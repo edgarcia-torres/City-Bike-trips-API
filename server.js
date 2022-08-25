@@ -6,7 +6,7 @@
  * 
  * Name: Edgar David Garcia Torres  Student ID: 104433206  Date: 19/05/2022
  * 
- * Heroku Link: _______________________________________________________________ 
+ * Heroku Link: https://gentle-sands-60457.herokuapp.com/
  * *******************************************************************************************/
 
 
@@ -56,7 +56,7 @@ app.get("/api/trips",(req,res)=>{ //takes parameters page and perPage to Query /
 })
 
 //GET ONE by Id
-app.get("/api/trips/:id",(req,res)=>{ // It will use this parameter to return a specific "Trip"
+app.get("/api/trips/:id",(req,res)=>{ // It will use this parameter to return a specific "Trip"  /api/trips/572bb8222b288919b68abf5a
   db.getTripById(req.params.id).then(data=>{
     res.status(200).json(data);
 }).catch(err=>{
@@ -69,8 +69,9 @@ app.get("/api/trips/:id",(req,res)=>{ // It will use this parameter to return a 
 
 //UPDATE record by Id
 app.put("/api/trips/:id",(req,res)=>{
+  console.log("Attempt to update ");
+  console.log(req.body);
   db.updateTripById(req.body, req.params.id).then(data=>{
-    console.log("Attempt to update ");
   }).then((data)=>{
     res.status(200).json(`sale ${req.body._id}  updated!!`);
   }).catch(err=>{

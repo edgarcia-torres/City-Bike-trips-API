@@ -6,7 +6,7 @@
  * 
  * Name: Edgar David Garcia Torres  Student ID: 104433206  Date: 19/05/2022
  * 
- * Heroku Link: _______________________________________________________________ 
+ * Heroku Link: https://gentle-sands-60457.herokuapp.com/
  * *******************************************************************************************/
 
 const mongoose = require("mongoose");
@@ -78,7 +78,9 @@ module.exports = class TripDB {
     }
 
     updateTripById(data, id) {
-        return this.Trip.updateOne({_id: id}, { $set: data }).exec();
+        console.log(" -----   inside update by ID, id is: ", id);
+        console.log("data  is: ", data);
+        return this.Trip.updateOne({_id: id},{ $set: data }).exec();
     }
 
     deleteTripById(id) {
